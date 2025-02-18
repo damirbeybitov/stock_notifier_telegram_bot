@@ -8,6 +8,8 @@ class Config:
 
     # Токен для Telegram бота
     BOT_TOKEN = os.getenv("BOT_TOKEN")
+    # Токен для ngrok
+    NGROK_AUTH_TOKEN = os.getenv("NGROK_AUTH_TOKEN")
 
     # Параметры для FastAPI сервера
     FASTAPI_HOST = os.getenv("FASTAPI_HOST", "127.0.0.1")
