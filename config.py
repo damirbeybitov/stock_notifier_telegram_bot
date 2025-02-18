@@ -1,15 +1,14 @@
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class Config:
     """Класс для хранения конфигураций проекта."""
 
     # Токен для Telegram бота
-    BOT_TOKEN = os.getenv("BOT_TOKEN", "your_default_bot_token_here")
+    BOT_TOKEN = os.getenv("BOT_TOKEN")
 
     # Параметры для FastAPI сервера
-    FASTAPI_HOST = os.getenv("FASTAPI_HOST", "0.0.0.0")
+    FASTAPI_HOST = os.getenv("FASTAPI_HOST", "127.0.0.1")
     FASTAPI_PORT = int(os.getenv("FASTAPI_PORT", 8000))
-
-# Пример использования
-config = Config()
-print(config.BOT_TOKEN)

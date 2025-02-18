@@ -2,8 +2,13 @@ from fastapi import FastAPI
 import asyncio
 from bot import send_message
 from config import Config  # Функция для отправки сообщений через бота
+import uvicorn
 
 app = FastAPI()
+
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
 
 @app.post("/notify/")
 async def notify_user(chat_id: int, message: str):
@@ -13,6 +18,11 @@ async def notify_user(chat_id: int, message: str):
 
 async def start_server():
     """Функция-заглушка для main.py, чтобы сервер работал в asyncio.gather()"""
-    import uvicorn
     config = Config.FASTAPI_HOST, Config.FASTAPI_PORT
-    await uvicorn.run(app, host=config[0], port=config[1])  
+    uvicorn.run(app, host=config[0], port=config[1])
+    
+
+# if __name__ == "__main__":
+#     config = Config.FASTAPI_HOST, Config.FASTAPI_PORT
+#     print(config)
+#     uvicorn.run(app, host=config[0], port=config[1])
