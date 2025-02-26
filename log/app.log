@@ -1,0 +1,482 @@
+2025-02-17 13:18:39,606 - bot - ERROR - Cannot close a running event loop
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1069, in __run
+    loop.run_until_complete(self.initialize())
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 662, in run_until_complete
+    self._check_running()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 621, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1094, in __run
+    loop.run_until_complete(self.shutdown())
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 662, in run_until_complete
+    self._check_running()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 621, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\Documents\my\diploma\stock_notifier_telegram_bot\bot.py", line 30, in start_bot
+    app.run_polling()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 868, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1099, in __run
+    loop.close()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 687, in close
+    raise RuntimeError("Cannot close a running event loop")
+RuntimeError: Cannot close a running event loop
+2025-02-17 13:18:39,682 - server - ERROR - asyncio.run() cannot be called from a running event loop
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\Documents\my\diploma\stock_notifier_telegram_bot\server.py", line 23, in start_server
+    await uvicorn.run(app, host=config[0], port=config[1])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 190, in run
+    raise RuntimeError(
+RuntimeError: asyncio.run() cannot be called from a running event loop
+2025-02-17 13:27:52,800 - server - ERROR - asyncio.run() cannot be called from a running event loop
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\Documents\my\diploma\stock_notifier_telegram_bot\server.py", line 23, in start_server
+    await uvicorn.run(app, host=config[0], port=config[1])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 190, in run
+    raise RuntimeError(
+RuntimeError: asyncio.run() cannot be called from a running event loop
+2025-02-17 13:27:52,825 - bot - ERROR - Cannot close a running event loop
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1069, in __run
+    loop.run_until_complete(self.initialize())
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 662, in run_until_complete
+    self._check_running()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 621, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1094, in __run
+    loop.run_until_complete(self.shutdown())
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 662, in run_until_complete
+    self._check_running()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 621, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\Documents\my\diploma\stock_notifier_telegram_bot\bot.py", line 30, in start_bot
+    await app.run_polling()
+          ^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 868, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1099, in __run
+    loop.close()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 687, in close
+    raise RuntimeError("Cannot close a running event loop")
+RuntimeError: Cannot close a running event loop
+2025-02-17 13:28:57,268 - bot - ERROR - Cannot close a running event loop
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1069, in __run
+    loop.run_until_complete(self.initialize())
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 662, in run_until_complete
+    self._check_running()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 621, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1094, in __run
+    loop.run_until_complete(self.shutdown())
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 662, in run_until_complete
+    self._check_running()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 621, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\Documents\my\diploma\stock_notifier_telegram_bot\bot.py", line 30, in start_bot
+    app.run_polling()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 868, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1099, in __run
+    loop.close()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 687, in close
+    raise RuntimeError("Cannot close a running event loop")
+RuntimeError: Cannot close a running event loop
+2025-02-17 13:28:57,293 - server - ERROR - asyncio.run() cannot be called from a running event loop
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\Documents\my\diploma\stock_notifier_telegram_bot\server.py", line 23, in start_server
+    await uvicorn.run(app, host=config[0], port=config[1])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 190, in run
+    raise RuntimeError(
+RuntimeError: asyncio.run() cannot be called from a running event loop
+2025-02-17 13:34:36,822 - server - ERROR - asyncio.run() cannot be called from a running event loop
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\Documents\my\diploma\stock_notifier_telegram_bot\server.py", line 23, in start_server
+    await uvicorn.run(app, host=config[0], port=config[1])
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\main.py", line 579, in run
+    server.run()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\uvicorn\server.py", line 66, in run
+    return asyncio.run(self.serve(sockets=sockets))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\runners.py", line 190, in run
+    raise RuntimeError(
+RuntimeError: asyncio.run() cannot be called from a running event loop
+2025-02-17 13:34:36,850 - bot - ERROR - Cannot close a running event loop
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1069, in __run
+    loop.run_until_complete(self.initialize())
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 662, in run_until_complete
+    self._check_running()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 621, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1094, in __run
+    loop.run_until_complete(self.shutdown())
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 662, in run_until_complete
+    self._check_running()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 621, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\Documents\my\diploma\stock_notifier_telegram_bot\bot.py", line 30, in start_bot
+    await app.run_polling()
+          ^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 868, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1099, in __run
+    loop.close()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 687, in close
+    raise RuntimeError("Cannot close a running event loop")
+RuntimeError: Cannot close a running event loop
+2025-02-17 13:35:37,920 - bot - ERROR - Cannot close a running event loop
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1069, in __run
+    loop.run_until_complete(self.initialize())
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 662, in run_until_complete
+    self._check_running()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 621, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1094, in __run
+    loop.run_until_complete(self.shutdown())
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 662, in run_until_complete
+    self._check_running()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 621, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\Documents\my\diploma\stock_notifier_telegram_bot\bot.py", line 30, in start_bot
+    await app.run_polling()
+          ^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 868, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1099, in __run
+    loop.close()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 687, in close
+    raise RuntimeError("Cannot close a running event loop")
+RuntimeError: Cannot close a running event loop
+2025-02-17 13:36:39,848 - bot - ERROR - Cannot close a running event loop
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1069, in __run
+    loop.run_until_complete(self.initialize())
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 662, in run_until_complete
+    self._check_running()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 621, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1094, in __run
+    loop.run_until_complete(self.shutdown())
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 662, in run_until_complete
+    self._check_running()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 621, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\Documents\my\diploma\stock_notifier_telegram_bot\bot.py", line 30, in start_bot
+    app.run_polling()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 868, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1099, in __run
+    loop.close()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 687, in close
+    raise RuntimeError("Cannot close a running event loop")
+RuntimeError: Cannot close a running event loop
+2025-02-17 13:37:24,168 - bot - ERROR - Cannot close a running event loop
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1069, in __run
+    loop.run_until_complete(self.initialize())
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 662, in run_until_complete
+    self._check_running()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 621, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1094, in __run
+    loop.run_until_complete(self.shutdown())
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 662, in run_until_complete
+    self._check_running()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\base_events.py", line 621, in _check_running
+    raise RuntimeError('This event loop is already running')
+RuntimeError: This event loop is already running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\Documents\my\diploma\stock_notifier_telegram_bot\bot.py", line 30, in start_bot
+    await app.run_polling()
+          ^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 868, in run_polling
+    return self.__run(
+           ^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 1099, in __run
+    loop.close()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\asyncio\proactor_events.py", line 687, in close
+    raise RuntimeError("Cannot close a running event loop")
+RuntimeError: Cannot close a running event loop
+2025-02-17 13:39:01,740 - bot - ERROR - httpx.ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 293, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\Documents\my\diploma\stock_notifier_telegram_bot\bot.py", line 30, in start_bot
+    await app.initialize()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 487, in initialize
+    await self.bot.initialize()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 300, in initialize
+    await super().initialize()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 763, in initialize
+    await self.get_me()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 1957, in get_me
+    return await super().get_me(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 895, in get_me
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 619, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 648, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 334, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 317, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)
+2025-02-17 13:40:41,388 - bot - ERROR - httpx.ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 394, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 256, in handle_async_request
+    raise exc from None
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection_pool.py", line 236, in handle_async_request
+    response = await connection.handle_async_request(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 101, in handle_async_request
+    raise exc
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 78, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_async\connection.py", line 156, in _connect
+    stream = await stream.start_tls(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_backends\anyio.py", line 67, in start_tls
+    with map_exceptions(exc_map):
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 293, in do_request
+    res = await self._client.request(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1540, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1629, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1657, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1694, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_client.py", line 1730, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 393, in handle_async_request
+    with map_httpcore_exceptions():
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\contextlib.py", line 158, in __exit__
+    self.gen.throw(value)
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\damir.beibitov\Documents\my\diploma\stock_notifier_telegram_bot\bot.py", line 33, in start_bot
+    await app.initialize()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_application.py", line 487, in initialize
+    await self.bot.initialize()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 300, in initialize
+    await super().initialize()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 763, in initialize
+    await self.get_me()
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 1957, in get_me
+    return await super().get_me(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 895, in get_me
+    result = await self._post(
+             ^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 619, in _post
+    return await self._do_post(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\ext\_extbot.py", line 354, in _do_post
+    return await super()._do_post(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\_bot.py", line 648, in _do_post
+    result = await request.post(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 202, in post
+    result = await self._request_wrapper(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_baserequest.py", line 334, in _request_wrapper
+    code, payload = await self.do_request(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\damir.beibitov\AppData\Local\Programs\Python\Python312\Lib\site-packages\telegram\request\_httpxrequest.py", line 317, in do_request
+    raise NetworkError(f"httpx.{err.__class__.__name__}: {err}") from err
+telegram.error.NetworkError: httpx.ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)

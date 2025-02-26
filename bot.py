@@ -1,26 +1,37 @@
-from telegram import Update
-from telegram.ext import Application, CommandHandler
+import asyncio
+import logging
+from aiogram import Bot, Dispatcher, types
+from aiogram.types import Message
+from aiogram.filters import Command
 from config import Config
 
-# Чтение токена из переменных окружения или конфигурационного файла
+# Настройка логирования
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("bot")
+
+# Чтение токена из конфигурационного файла
 BOT_TOKEN = Config.BOT_TOKEN
 
-# Создаем экземпляр бота
-app = Application.builder().token(BOT_TOKEN).build()
+# Создаем экземпляры бота и диспетчера
+bot = Bot(token=BOT_TOKEN)
+dp = Dispatcher()
 
-async def start(update: Update, context):
+@dp.message(Command('start'))
+async def start(message: Message):
     """Обработчик команды /start для аутентификации пользователя"""
-    chat_id = update.message.chat_id
-    # Здесь может быть логика для аутентификации пользователя, например, запись в базу данных
-    await update.message.reply_text(f"Привет! Ты авторизован, {chat_id}!")
+    chat_id = message.chat.id
+    # Здесь может быть логика для аутентификации пользователя
+    await message.answer(f"Привет! Ты авторизован, {chat_id}!")
 
-async def send_message(chat_id: int, message: str):
+async def send_message(chat_id: int, text: str):
     """Функция для отправки уведомлений"""
-    await app.bot.send_message(chat_id=chat_id, text=message)
+    await bot.send_message(chat_id=chat_id, text=text)
 
-# Регистрация обработчиков команд
-app.add_handler(CommandHandler("start", start))
+async def start_bot():
+    try:
+        await dp.start_polling(bot)
+    except Exception as e:
+        logger.error(e)
 
-def start_bot():
-    """Запуск бота"""
-    app.run_polling()
+if __name__ == "__main__":
+    asyncio.run(start_bot())
