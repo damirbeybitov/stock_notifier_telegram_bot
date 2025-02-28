@@ -52,11 +52,11 @@ app = FastAPI(lifespan=lifespan)
 async def root():
     return {"message": "Hello World"}
 
-@app.get("/")
+@app.get("/ping")
 async def ping():
     return {"status": "ok", "message": "pong"}
 
-@app.post("/notify/")
+@app.post("/notify")
 async def notify_user(chat_id: int, message: str):
     asyncio.create_task(send_message(chat_id, message))
     return {"status": "ok", "message": "Notification sent"}

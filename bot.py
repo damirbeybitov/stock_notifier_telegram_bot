@@ -1,10 +1,10 @@
 import asyncio
 import logging
-from aiogram import Bot, Dispatcher, types
-from aiogram.types import Message
-from aiogram.filters import Command
 from config import Config
 from logger import init_logger
+from telegram import Update
+from telegram.ext import Application, CommandHandler
+
 
 logger = init_logger("bot")
 
