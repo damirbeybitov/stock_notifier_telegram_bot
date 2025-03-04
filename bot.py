@@ -1,5 +1,8 @@
-from telegram import Update
-from telegram.ext import Application, CommandHandler
+import asyncio
+import logging
+from aiogram import Bot, Dispatcher, types
+from aiogram.types import Message
+from aiogram.filters import Command
 from config import Config
 from logger import init_logger
 

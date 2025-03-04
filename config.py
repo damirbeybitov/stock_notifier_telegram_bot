@@ -2,6 +2,9 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
+from dotenv import load_dotenv
+
+load_dotenv('.env')
 
 class Config:
     """Класс для хранения конфигураций проекта."""
