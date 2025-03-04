@@ -22,7 +22,7 @@ logger = init_logger("server")
 #             return tunnel.get("public_url")
 #     return None
 
-async def get_ngrok_url():
+async def get_ngrok():
     """Запускает ngrok и получает URL для вебхука"""
     ngrok.set_auth_token(Config.NGROK_AUTH_TOKEN)
     listener = await ngrok.connect(Config.FASTAPI_PORT, "http")
@@ -31,20 +31,23 @@ async def get_ngrok_url():
     # logger.info(f'Ngrok labels: {listener.labels()}')
     # logger.info(f'Ngrok metadata: {listener.metadata()}')
     # logger.info(f'Ngrok url: {listener.url()}')
-    return listener.url()
+    return listener
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Запускается при старте сервера, устанавливает вебхук"""
-    global WEBHOOK_URL
-    WEBHOOK_URL = await get_ngrok_url()
-    if WEBHOOK_URL:
-        logger.info(f"Webhook URL: {WEBHOOK_URL}")
-        await set_webhook(WEBHOOK_URL + "/webhook")
+    ngrok_listener = await get_ngrok()
+    if ngrok_listener:
+        webhook_url = ngrok_listener.url()
+        logger.info(f"Webhook URL: {webhook_url}")
+        await set_webhook(webhook_url + "/webhook")
         await initialize_app()
     else:
-        print("Ошибка: Не удалось получить Webhook URL")
+        logger.error("Ошибка: Не удалось получить Webhook URL")
     yield
+    if ngrok_listener:
+        await ngrok.disconnect(webhook_url)
+        logger.info("Ngrok tunnel закрыт")
 
 app = FastAPI(lifespan=lifespan)
 
