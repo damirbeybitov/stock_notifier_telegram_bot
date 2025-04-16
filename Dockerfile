@@ -13,4 +13,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Запуск FastAPI приложения
-CMD ["uvicorn", "server:app", "--host", "127.0.0.1", "--port", "8000"]
+CMD ["python", "bot.py"]

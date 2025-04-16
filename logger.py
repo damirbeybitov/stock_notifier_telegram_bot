@@ -41,15 +41,3 @@ def init_logger(name, log_level=logging.INFO, log_file="log/app.log"):
     logger.error = partial(logger.error, exc_info=True)
 
     return logger
-
-# Initialize the main logger
-server_logger = init_logger("server")
-
-# Configure Uvicorn to use the custom logger
-uvicorn_logger = logging.getLogger("uvicorn")
-uvicorn_logger.handlers = server_logger.handlers
-uvicorn_logger.propagate = False
-
-uvicorn_access_logger = logging.getLogger("uvicorn.access")
-uvicorn_access_logger.handlers = server_logger.handlers
-uvicorn_access_logger.propagate = False
